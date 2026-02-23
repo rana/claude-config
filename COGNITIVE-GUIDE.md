@@ -197,6 +197,9 @@ Not every situation needs the full toolkit. Quick single-skill invocations:
 | "What are we assuming?" | `/archaeology --layers F2` |
 | "What would happen if we did the opposite?" | `/inversion` |
 | "What's the strongest case for what we have?" | `/steelman` |
+| "What can an attacker do here?" | `/threat-model` |
+| "Are we ready to deploy?" | `/launch-gate` |
+| "What breaks when this hits production?" | `/compose ghost, incident-ready` |
 
 ## Integration with Elmer
 
@@ -254,6 +257,57 @@ The scratch skill now routes cognitive items too:
 | "dig deep", "excavate", "what am I not seeing" | `/archaeology` |
 | "reframe", "different angle", "spatial" | `/reframe` |
 | "wrong conclusion", "reasoning failed" | `/cognitive-debug` |
+| "security", "attack", "vulnerability", "threat" | `/threat-model` |
+| "ready to ship", "launch", "production ready" | `/launch-gate` |
+| "dependency", "vendor", "license", "supply chain" | `/supply-chain-audit` |
+
+## Security Thinking as a Cognitive Mode
+
+The security and production readiness skills (`/threat-model`, `/hardening-audit`, `/launch-gate`, `/incident-ready`, `/supply-chain-audit`) are analytical, but they benefit from cognitive preparation — the same way `/gaps` benefits from running `/archaeology` first.
+
+### Why Security Needs Cognitive Skills
+
+Security analysis tends toward two failure modes:
+1. **Checklist compliance** — running through OWASP or CIS benchmarks without reasoning about *this specific system*. Produces findings that are technically correct but not prioritized for the actual risk profile.
+2. **Threat theater** — imagining sophisticated attack scenarios while missing the obvious (an unrotated API key, an unvalidated input, a misconfigured CORS header).
+
+The cognitive skills counter both:
+
+| Cognitive skill | What it adds to security analysis |
+|----------------|----------------------------------|
+| `/archaeology --layers F2,F7` | Surfaces *security assumptions you didn't know you were making* (F2) and *tensions between security and usability* (F7). Example: "We assumed no auth means simpler security" — actually it means a wider anonymous attack surface. |
+| `/reframe --searches negative,orthogonal` | **Negative space:** What attack surfaces are conspicuously unaddressed? **Orthogonal:** What if the threat isn't technical but economic (cost runaway) or reputational (content integrity)? |
+| `/ghost` | The security-specific hidden dependency detector. What does the security posture implicitly depend on that isn't enforced? (DNS security, vendor 2FA, CI pipeline isolation) |
+| `/inversion` | "What if our permissive robots.txt is the attack vector?" "What if the crisis detection system is used to *find* vulnerable seekers rather than help them?" Inverting security assumptions reveals which defenses are load-bearing. |
+
+### Security-Cognitive Compose Recipes
+
+```bash
+# Deep threat analysis with cognitive preparation
+/compose archaeology --layers F2,F7, threat-model : "the search API"
+
+# Supply chain audit with assumption surfacing
+/compose ghost, supply-chain-audit : "our dependency tree"
+
+# Production readiness with full cognitive sweep
+/compose archaeology --layers F4,F11, launch-gate : "Phase 0b deployment"
+
+# Security tension mapping
+/compose triad, hardening-audit : "openness vs protection"
+
+# Incident readiness with hidden assumption surfacing
+/compose ghost, incident-ready : "first week in production"
+```
+
+### The Security-Specific Cognitive Trap
+
+The most common cognitive failure in security work is **asymmetric imagination**: imagining sophisticated attacks in detail while failing to notice mundane misconfigurations. `/cognitive-debug` is the correction:
+
+```
+/cognitive-debug "we spent a week on prompt injection defenses but haven't configured CSP headers"
+```
+
+This traces back to the breakpoint — usually pattern-matching ("AI security" triggers "prompt injection" associations) rather than mechanism-tracing (mapping the actual attack surface systematically).
 
 ## Compose Recipes
 
@@ -277,6 +331,12 @@ Tested combinations that produce reliably good results:
 
 # Full spatial sweep
 /compose reframe, gaps, consequences : "the subject"
+
+# Security review with cognitive depth
+/compose archaeology --layers F2,F7, threat-model, hardening-audit : "the system"
+
+# Production readiness — full sweep
+/compose ghost, threat-model, launch-gate : "Phase N deployment"
 ```
 
 ## Principles

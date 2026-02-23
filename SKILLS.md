@@ -1,6 +1,6 @@
 # Claude Code Skills & Commands Reference
 
-Personal toolkit for design analysis, workflow automation, cognitive steering, and thinking amplification.
+Personal toolkit for design analysis, workflow automation, cognitive steering, security posture, production readiness, and thinking amplification.
 
 ## Quick Reference
 
@@ -34,6 +34,18 @@ Each skill looks at a design from a different angle. Use them individually or ch
 | `/deep-review` | All dimensions combined — the comprehensive quality gate | "Full review before implementation." |
 | `/workflow-trace` | End-to-end workflow mapping, friction points, handoffs | "Trace the user journey." "Walk through the flow." |
 | `/scratch` | Process scratch.md backlog, classify items, route to skills | "What's in the backlog?" "Triage scratch." |
+
+### Security & Production Readiness
+
+Skills that evaluate whether a system is secure, operable, and ready for real users. Each addresses a different dimension of production fitness. Use individually or compose into a full security review.
+
+| Skill | Lens | Trigger phrases |
+|-------|------|----------------|
+| `/threat-model` | Assets, trust boundaries, data flows, STRIDE threats | "What can go wrong?" "Model the threats." "Attack surface?" |
+| `/hardening-audit` | HTTP headers, CSP, CORS, input validation, secrets, dependencies | "Harden this." "Check the headers." "Security audit." |
+| `/launch-gate` | Go/no-go across SLAs, monitoring, backups, rollback, legal | "Are we ready to ship?" "Launch checklist." |
+| `/incident-ready` | Runbooks, escalation, severity classification, recovery procedures | "What if it breaks?" "On-call readiness?" |
+| `/supply-chain-audit` | Dependencies, vendor risk, licenses, lockfile, SBOMs | "Audit dependencies." "Vendor risk?" "License check." |
 
 ### Forward-Looking / Causal
 
@@ -115,11 +127,25 @@ Skills that shape *how* thinking happens rather than *what* is analyzed. See [CO
 3. `/ghost` — Surface hidden dependencies
 4. `/drift-detect` — Is this area still aligned with the architecture?
 
-### Pre-launch
-1. `/ops-review` — Operational readiness
-2. `/ghost` — Hidden dependencies that could break in production
-3. `/api-review` — Surface consistency
-4. `/docs-quality` — Can the next person understand this?
+### Security review (before implementation)
+1. `/threat-model` — What are the assets, boundaries, and threats?
+2. `/hardening-audit` — Is the stack properly configured?
+3. `/supply-chain-audit` — Are dependencies and vendors acceptable risks?
+4. `/ghost` — What security assumptions are invisible?
+
+### Pre-launch (phase boundary)
+1. `/launch-gate` — Full go/no-go readiness check
+2. `/incident-ready` — Can the team handle failures?
+3. `/ops-review` — Operational readiness
+4. `/api-review` — Surface consistency
+5. `/docs-quality` — Can the next person understand this?
+
+### Full production readiness review
+1. `/threat-model` — Threat landscape
+2. `/hardening-audit` — Configuration security
+3. `/supply-chain-audit` — Dependency and vendor risk
+4. `/incident-ready` — Operational response capability
+5. `/launch-gate` — Go/no-go decision
 
 ### Navigating a strategic tension
 1. `/triad "performance vs maintainability"` — Map the tension through multiple lenses
@@ -137,4 +163,5 @@ Skills that shape *how* thinking happens rather than *what* is analyzed. See [CO
 - **All skills are read-only** — they propose changes but never modify files
 - **Action-biased** — every finding comes with a specific proposed change
 - **Composable** — use `/compose` to chain skills into multi-pass analysis
+- **Architecture-derived, not checklist-driven** — security and readiness skills reason from the specific stack, not generic lists
 - **Every word shapes the cognitive field** — skill prompts are precision instruments, not instructions to paraphrase
