@@ -19,4 +19,8 @@ What questions would I benefit from asking?
 
 What am I not asking?
 
+What constraints am I unconsciously accepting?
+
+Where am I compressing prematurely, and where am I expanding without structure?
+
 You have complete design autonomy.

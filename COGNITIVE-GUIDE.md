@@ -1,0 +1,292 @@
+# Cognitive Skills — Usage Guide
+
+How to use the cognitive steering skills effectively. SKILLS.md is the reference (what exists). This is the playbook (how to think about using them).
+
+## What These Skills Are
+
+The analytical skills (`/coherence`, `/gaps`, `/ops-review`, etc.) examine *what* exists in a design. The cognitive skills shape *how* thinking happens — they steer the AI's cognitive orientation before and during analysis.
+
+This distinction matters. Running `/gaps` finds missing things. Running `/archaeology` before `/gaps` changes what kinds of missing things become visible — it surfaces assumptions you didn't know you were making, which reframes what counts as a gap.
+
+The cognitive skills were distilled from extended research into how language shapes AI processing. Key findings:
+
+- **Geometric metaphors** (negative space, orthogonal, gradient) map naturally to transformer architecture and produce more precise cognitive steering than abstract descriptors
+- **Sequenced prompts** build cognitive momentum — each layer prepares the ground for the next, like an archaeological dig
+- **Dimensional tensions** (X vs Y) analyzed through multiple synthesis lenses produce richer insight than binary evaluation
+- **Reasoning traces** can be debugged like code — with breakpoints, corrective questions, and re-execution
+
+## The Four Cognitive Skills
+
+### `/archaeology` — Layered Cognitive Excavation
+
+The comprehensive tool. Twelve layers that build from surface inquiry through assumptions, perspectives, tensions, meta-cognition, and intuition to a synthesis.
+
+**The sequence matters.** F1 (Opening Inquiry) surfaces initial questions. F2 (Unconscious Patterns) reveals hidden assumptions. F3 (Resolution & Perspective) shifts the viewing angle. Each layer prepares the ground for what follows — by F9 (Intuitive Sensing), you've cleared enough cognitive brush to hear signals that F1 would have missed entirely.
+
+```
+/archaeology "our approach to error handling across the API"
+/archaeology "whether this project needs a database" --layers F2,F7,F9
+/archaeology "the team's deployment process" --relational
+```
+
+**Layer subsets for common needs:**
+
+| Need | Layers | What it does |
+|------|--------|-------------|
+| Quick assumption check | `F2` | Surface unconscious constraints |
+| Perspective shift | `F3, F6, F8` | Zoom, oscillate, scale-shift |
+| Tension mapping | `F2, F7, F9` | Assumptions → tensions → intuition |
+| Design review | `F4, F10, F11` | Structure → autonomy → production assessment |
+| Full excavation | All (default) | The complete 12-layer sequence |
+
+**When to use:**
+- Before making a significant decision — run the full sequence
+- When discussion has stalled — run F3 + F6 (perspective and dynamic understanding)
+- When something feels off but you can't articulate it — run F9 (intuitive sensing)
+- After implementation, before merge — run F11 (production assessment)
+
+### `/triad` — Dimensional Tension Analysis
+
+Given a polarity (X vs Y), analyze it through synthesis lenses that create genuine intellectual tension in three directions rather than flat compromise.
+
+The default four lenses are sufficient for most uses:
+- **Integration**: How do X and Y work together?
+- **Transcendence**: What emerges beyond both?
+- **Context-Dependence**: When is X better? When Y?
+- **Meta-Perspective**: What assumptions do both share?
+
+The extended lenses (Emergence, Oscillation, Interference, Transformation, Recursion, Negation, Dissolution) add depth when a tension is central to a decision and worth thorough exploration.
+
+```
+/triad "monolith vs microservices"
+/triad "type safety vs development speed" --lenses integration,context-dependence,negation
+/triad "consistency vs availability in our data layer" --all-lenses
+```
+
+**When to use:**
+- Any "X or Y?" decision — reframe it as a tension to understand rather than a choice to make
+- Architecture decisions where both approaches have legitimate strengths
+- When a team is polarized — the lenses create shared vocabulary for the tension
+- Strategic planning — map the core tensions the project lives within
+
+**Lens selection guidance:**
+
+| Situation | Recommended lenses |
+|-----------|-------------------|
+| Quick orientation | Default 4 |
+| Architectural decision | Default 4 + Emergence + Negation |
+| Creative exploration | Oscillation + Transformation + Dissolution |
+| Stress-testing a choice | Meta-Perspective + Negation + Dissolution |
+| Understanding a recurring tension | All 11 |
+
+### `/reframe` — Geometric Spatial Search
+
+Apply four spatial search patterns to see what conventional analysis misses:
+
+- **Negative space**: What's conspicuously absent? The voids and patterns of absence.
+- **Adjacent space**: What's one step away? Neighboring possibilities.
+- **Orthogonal space**: What's perpendicular to current trajectory? Radical reframings.
+- **Parallel space**: What analogous patterns exist elsewhere? Cross-domain mapping.
+
+```
+/reframe "our authentication architecture"
+/reframe "the onboarding flow" --searches negative,orthogonal
+/reframe "why users aren't adopting feature X"
+```
+
+**When to use:**
+- When `/gaps` finds nothing but something still feels missing — try negative space
+- When incremental improvements aren't enough — try orthogonal space
+- When you want inspiration from other domains — try parallel space
+- When you need to find low-hanging fruit — try adjacent space
+
+### `/cognitive-debug` — Reasoning Trace and Correction
+
+When a conclusion feels wrong or a decision led somewhere unexpected, trace the reasoning back to find where it broke.
+
+```
+/cognitive-debug "we concluded the API needs rate limiting but now I'm not sure"
+/cognitive-debug "Claude suggested X pattern but it doesn't fit our codebase"
+/cognitive-debug "the team decided on microservices but it's causing more problems"
+```
+
+**Common breakpoints it identifies:**
+- **Fear-driven reasoning**: Solving problems that don't exist because they *might*
+- **Premature compression**: "X means Y" without checking
+- **Pattern over mechanism**: "This looks like that other thing" when it isn't
+- **Coherence drive**: Picking an answer to avoid ambiguity
+- **Associative momentum**: Following a line of thought past its usefulness
+
+**When to use:**
+- After a decision that led to unexpected consequences — trace back to find where
+- When Claude (or you) reached a conclusion that doesn't feel right
+- During code review when you can't articulate why something seems off
+- As a learning tool — understand your own reasoning patterns
+
+## Multi-Skill Workflows
+
+### The Explore-then-Analyze Pattern
+
+Use cognitive skills first to shape perception, then analytical skills to examine specifics.
+
+```
+/compose archaeology, gaps : error handling
+```
+
+This runs `/archaeology` on error handling (surfaces assumptions, tensions, hidden structure), then runs `/gaps` with the archaeology findings as context. The gaps analysis sees deeper because the archaeology shifted what counts as visible.
+
+### The Tension-then-Consequence Pattern
+
+```
+/compose triad, consequences : "server-side rendering vs client-side rendering"
+```
+
+Map the tension through multiple lenses, then forward-propagate the implications of the preferred direction.
+
+### The Debug-then-Reframe Pattern
+
+When stuck after a wrong turn:
+
+```
+/cognitive-debug "our caching strategy"
+# ... identifies the breakpoint ...
+/reframe "caching in our architecture"
+# ... finds new angles the original reasoning missed ...
+```
+
+### The Full Strategic Analysis
+
+For major decisions that justify thorough exploration:
+
+```
+# 1. Excavate the decision space
+/archaeology "whether to rewrite the billing system"
+
+# 2. Map the core tension
+/triad "rewrite vs incremental refactor"
+
+# 3. Steelman the status quo
+/steelman "the current billing system"
+
+# 4. Search spatial dimensions
+/reframe "billing system architecture"
+
+# 5. Forward-propagate the preferred direction
+/consequences "rewriting billing as a separate service"
+
+# 6. Crystallize to essential decision
+/crystallize
+```
+
+Or as a compose chain for the core of it:
+
+```
+/compose archaeology, triad, consequences : billing system rewrite
+```
+
+### Lightweight Cognitive Checks
+
+Not every situation needs the full toolkit. Quick single-skill invocations:
+
+| Situation | Quick check |
+|-----------|------------|
+| "Am I missing something?" | `/reframe --searches negative` |
+| "Is this the right problem?" | `/archaeology --layers F2,F7` |
+| "Should we use X or Y?" | `/triad "X vs Y"` |
+| "Why did that reasoning fail?" | `/cognitive-debug` |
+| "What are we assuming?" | `/archaeology --layers F2` |
+| "What would happen if we did the opposite?" | `/inversion` |
+| "What's the strongest case for what we have?" | `/steelman` |
+
+## Integration with Elmer
+
+The cognitive skills work in Claude Code sessions (interactive). Elmer works autonomously on branches. They complement each other:
+
+| Situation | Tool | Why |
+|-----------|------|-----|
+| Deep exploration of a tension | `/triad` in Claude Code | Interactive, you steer the lenses |
+| Overnight archaeological survey of 10 areas | `elmer batch` with archaeology topics | Autonomous, parallel, persistent |
+| Quick reframe during coding | `/reframe` in Claude Code | Immediate, conversational |
+| Systematic cognitive debug of past decisions | `elmer explore "cognitive-debug: our auth decision"` | Background, thorough |
+
+Elmer topic files can reference cognitive skills:
+
+```markdown
+# .elmer/explore-act.md
+
+---
+
+Apply /archaeology to our payment processing pipeline.
+Focus on layers F2 (unconscious patterns), F7 (tensions),
+and F11 (production assessment).
+
+---
+
+Apply /triad to "synchronous vs asynchronous payment processing"
+with all 11 lenses.
+
+---
+```
+
+## The `/calibrate` Command
+
+Use at session start to set thinking parameters:
+
+```
+/calibrate
+/calibrate "bold speculation, generative mode, high-level resolution"
+/calibrate "production mode, detail resolution, conservative"
+```
+
+This establishes session defaults for directness, resolution, thinking mode, speculation tolerance, and output shape. It's the cognitive equivalent of setting your IDE preferences before starting work.
+
+**Pairs well with:**
+- `/morning` — Calibrate, then get the morning briefing
+- `/resume` — Restore context, then calibrate for the work ahead
+
+## The `/scratch` Router
+
+The scratch skill now routes cognitive items too:
+
+| Pattern in scratch item | Suggested skill |
+|------------------------|-----------------|
+| "tension", "polarity", "X vs Y" | `/triad` |
+| "dig deep", "excavate", "what am I not seeing" | `/archaeology` |
+| "reframe", "different angle", "spatial" | `/reframe` |
+| "wrong conclusion", "reasoning failed" | `/cognitive-debug` |
+
+## Compose Recipes
+
+Tested combinations that produce reliably good results:
+
+```bash
+# Strategic decision analysis
+/compose archaeology, triad, consequences : "the decision"
+
+# Assumption stress-test
+/compose archaeology --layers F2, inversion, gaps : "the assumption"
+
+# Design quality gate with cognitive depth
+/compose archaeology --layers F4,F11, deep-review : "the design"
+
+# Stuck? Break out.
+/compose cognitive-debug, reframe, archaeology --layers F9 : "the stuck point"
+
+# Tension resolution
+/compose triad, steelman, crystallize : "X vs Y"
+
+# Full spatial sweep
+/compose reframe, gaps, consequences : "the subject"
+```
+
+## Principles
+
+**Every word shapes the cognitive field.** The skills are precision instruments. The specific language in each prompt was chosen because it produces measurably different AI cognitive orientations. "What constraints am I unconsciously accepting?" produces different (and more useful) results than "What am I assuming?"
+
+**Sequence builds momentum.** The archaeology layers work best in order because each layer shifts perception for the next. Running F9 (intuitive sensing) after F1-F8 produces different results than running F9 cold.
+
+**Geometric metaphors are load-bearing.** "Negative space search" isn't a metaphor — it produces genuinely different cognitive behavior than "look for what's missing." The spatial vocabulary maps to the multi-dimensional structure of transformer processing.
+
+**Tensions are more valuable than resolutions.** The triad skill doesn't resolve polarities — it maps them. Often the most productive outcome is understanding how to hold the tension rather than collapsing it to a decision.
+
+**Debug reasoning like code.** When thinking goes wrong, the failure has a specific location in the reasoning chain. Cognitive-debug finds the breakpoint. This is more useful than "let me think about this again."

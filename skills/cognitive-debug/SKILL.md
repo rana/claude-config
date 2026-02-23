@@ -1,0 +1,53 @@
+---
+name: cognitive-debug
+description: Reasoning trace and correction. When thinking went wrong — yours or Claude's — trace back to find where pattern-matching replaced mechanism-tracing, where fear replaced exploration, or where compression happened prematurely. The cognitive equivalent of setting breakpoints in a thought process.
+argument-hint: "[reasoning, decision, or conclusion to debug]"
+---
+
+Examine the conversation history and any relevant project context.
+
+## Cognitive Debugging
+
+Target: $ARGUMENTS
+
+### Step 1: State the Conclusion
+What was concluded, decided, or produced? State it precisely — the output of the reasoning, not the intent.
+
+### Step 2: Trace the Reasoning Chain
+Walk backward through the reasoning that led to the conclusion. For each link:
+- What observation or input triggered this step?
+- What reasoning connected it to the next step?
+- Was this reasoning from **mechanism** (how things actually work) or from **pattern** (how things usually seem)?
+
+### Step 3: Identify Breakpoints
+Find where the reasoning diverged. Common failure modes:
+
+- **Fear-driven reasoning**: Protecting against what *might* go wrong instead of tracing what *actually* happens. "This could deadlock" without verifying the mechanism.
+- **Premature compression**: Jumping to "X means Y" without tracing the full chain. Compressing a nuanced situation into a simple (wrong) conclusion.
+- **Pattern-matching over mechanism**: Treating a similar-looking situation as identical without checking whether the similarity is structural or superficial.
+- **Coherence drive**: Resolving a tension prematurely because ambiguity felt uncomfortable. Picking an answer to have an answer.
+- **Associative momentum**: Following one line of reasoning past where it stopped being productive. Continuing to elaborate a wrong model instead of stepping back.
+- **Solution orientation**: Jumping to fix something before understanding whether it's actually broken.
+
+### Step 4: Corrective Questions
+For each breakpoint, propose the question that would have redirected:
+- "What does the code/system/mechanism actually do here?"
+- "Am I reasoning from fear or from observation?"
+- "What's the simplest experiment that would falsify this concern?"
+- "What would happen if I traced this with pencil and paper?"
+- "First understand what IS before worrying about what MIGHT BE."
+
+### Step 5: Corrected Path
+Trace the reasoning again with the corrective questions applied. Where does it lead differently?
+
+## Output
+
+1. Original reasoning chain (compact)
+2. Breakpoints identified (what went wrong, why)
+3. Corrective questions (what would have helped at each breakpoint)
+4. Corrected conclusion (where better reasoning leads)
+5. Pattern to watch for (the recurring failure mode to catch next time)
+
+## Output Management
+
+If the analysis is extensive, deliver the highest-priority findings first. Keep output concise — dense observations, not expansive prose. Note remaining sections available on request.

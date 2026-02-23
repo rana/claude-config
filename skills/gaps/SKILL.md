@@ -16,6 +16,7 @@ Systematically search for:
 4. **Persona blind spots** — Users, roles, or contexts not considered. Who is underserved?
 5. **Phase transition gaps** — What's needed to move between phases that isn't specified? Prerequisites assumed but not documented.
 6. **The unasked questions** — What questions would benefit from being asked? What isn't being asked?
+7. **Spatial gaps** — Negative space (what's conspicuously absent from the whole), orthogonal space (what reframings reveal hidden gaps), adjacent space (what's one step beyond current scope that matters).
 
 Focus area: $ARGUMENTS
 
