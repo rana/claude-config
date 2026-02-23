@@ -1,4 +1,4 @@
-Draft a commit message from the current changes, then stage, commit, and sync with the remote. This combines `/commit-message` and `/commit-sync` into a single workflow.
+Draft a commit message from the current changes, then stage, commit, and sync with the remote.
 
 ## Steps
 
