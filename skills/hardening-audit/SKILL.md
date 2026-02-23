@@ -89,7 +89,17 @@ Present as a prioritized checklist. No changes to files — document only.
 
 ## Output Management
 
-If the analysis is extensive, deliver critical and high-severity findings first. Note remaining sections available on request.
+**Hard constraints:**
+- Maximum 10 findings per run. Prioritize critical and high-severity gaps.
+- If no $ARGUMENTS focus area is given, evaluate only sections 1 (HTTP Headers), 2 (Input Validation), and 3 (Secret Management) — the most commonly exploited surfaces.
+- Write findings incrementally. Do not accumulate a single large response.
+
+**Document reading strategy:**
+- Read deployment config, middleware, and security-relevant code paths. Skip business logic unrelated to input/output boundaries.
+- Do not enumerate every header or endpoint — focus on gaps and misconfigurations.
+
+**If output would exceed comfortable length:**
+Stop. Deliver what you have. State which sections remain unreviewed and offer to continue.
 
 What hardening measures exist but are incomplete?
 

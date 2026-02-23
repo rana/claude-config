@@ -27,7 +27,12 @@ Present the defense first, weaknesses second. The goal is to overcome the best c
 
 ## Output Management
 
-If the analysis is extensive, deliver the highest-priority findings first. Keep output concise — dense observations, not expansive prose. Note remaining sections available on request.
+**Hard constraints:**
+- Keep the defense concise. Maximum 8 key arguments for the status quo.
+- Write findings incrementally. Do not accumulate a single large response.
+
+**If output would exceed comfortable length:**
+Stop. Deliver the defense and remaining weaknesses so far. Offer to continue with the decision threshold analysis.
 
 What questions would I benefit from asking?
 

@@ -30,7 +30,12 @@ Present as an action list. No changes to files — document only.
 
 ## Output Management
 
-If the analysis is extensive, deliver the highest-priority findings first. Keep output concise — dense observations, not expansive prose. Note remaining sections available on request.
+**Hard constraints:**
+- Maximum 8 ghost dependencies per run. Prioritize by "what breaks at 2am" severity.
+- Write findings incrementally. Do not accumulate a single large response.
+
+**If output would exceed comfortable length:**
+Stop. Deliver what you have. State which assumption categories remain unsearched and offer to continue.
 
 What questions would I benefit from asking?
 

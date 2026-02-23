@@ -107,7 +107,16 @@ Conclude with a synthesis across all layers: what emerged from the full excavati
 
 ## Output Management
 
-If the analysis is extensive, deliver the highest-priority findings first. Keep output concise — dense observations, not expansive prose. Note remaining sections available on request.
+**Hard constraints:**
+- Without `--layers` or `--dialogue`, run at most 6 layers before pausing. Deliver findings so far and offer to continue with remaining layers.
+- Each layer: 1-2 sentence summary + key observations. Dense, not expansive.
+- Write findings incrementally. Do not accumulate a single large response.
+
+**Document reading strategy:**
+- Read project documentation selectively based on the excavation target. Not all docs are relevant to all subjects.
+
+**If output would exceed comfortable length:**
+Stop. Deliver the synthesis of layers completed so far. State which layers remain and offer to continue.
 
 What questions would I benefit from asking?
 

@@ -59,4 +59,9 @@ For each open item, identify the best analysis skill:
 
 ## Output Management
 
-If the analysis is extensive, deliver the highest-priority findings first. Keep output concise — dense observations, not expansive prose. Note remaining sections available on request.
+**Hard constraints:**
+- For the summary table, show at most 15 items per page. Offer to continue if more exist.
+- Write findings incrementally. Do not accumulate a single large response.
+
+**If output would exceed comfortable length:**
+Stop. Deliver items processed so far. State how many remain and offer to continue.

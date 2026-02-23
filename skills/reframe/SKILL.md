@@ -55,7 +55,13 @@ After all searches:
 
 ## Output Management
 
-If the analysis is extensive, deliver the highest-priority findings first. Keep output concise — dense observations, not expansive prose. Note remaining sections available on request.
+**Hard constraints:**
+- Maximum 8 findings per search. Prioritize by insight value.
+- If running all four core searches, keep each search to 3-4 key observations before moving to the next.
+- Write findings incrementally. Do not accumulate a single large response.
+
+**If output would exceed comfortable length:**
+Stop. Deliver searches completed so far plus the synthesis of those. State which searches remain and offer to continue.
 
 What questions would I benefit from asking?
 

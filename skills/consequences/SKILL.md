@@ -33,7 +33,12 @@ Present as a propagation chain, not a flat list. Show how effects cascade.
 
 ## Output Management
 
-If the analysis is extensive, deliver the highest-priority findings first. Keep output concise — dense observations, not expansive prose. Note remaining sections available on request.
+**Hard constraints:**
+- Maximum 8 consequences per run. Prioritize by impact and irreversibility.
+- Write findings incrementally. Do not accumulate a single large response.
+
+**If output would exceed comfortable length:**
+Stop. Deliver the propagation chain so far. State which effect orders remain unexplored and offer to continue.
 
 What questions would I benefit from asking?
 

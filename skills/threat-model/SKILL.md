@@ -67,7 +67,17 @@ Present as a prioritized threat register. No changes to files — document only.
 
 ## Output Management
 
-If the analysis is extensive, deliver the highest-priority threats first (those that are both high-impact and inadequately mitigated). Note remaining sections available on request.
+**Hard constraints:**
+- Maximum 8 threats in the register per run. Prioritize high-impact with inadequate mitigation.
+- If no $ARGUMENTS focus area is given, run Phases 1-2 (Asset Inventory + Trust Boundaries) and the top threats from Phase 4. Skip exhaustive data flow tracing.
+- Write findings incrementally. Do not accumulate a single large response.
+
+**Document reading strategy:**
+- Read architecture docs and deployment config first. Read code only at trust boundaries and entry points.
+- Skip internal implementation details irrelevant to the attack surface.
+
+**If output would exceed comfortable length:**
+Stop. Deliver the threat register as-is. State which phases remain incomplete and offer to continue.
 
 What attack vectors am I not considering?
 

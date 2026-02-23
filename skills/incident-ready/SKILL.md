@@ -94,7 +94,17 @@ Present as a readiness assessment. No changes to files — document only.
 
 ## Output Management
 
-If the analysis is extensive, deliver SEV-1 scenario coverage first. Note remaining sections available on request.
+**Hard constraints:**
+- Maximum 10 findings per run. Prioritize SEV-1 scenario gaps.
+- If no $ARGUMENTS focus area is given, evaluate only sections 1 (Failure Scenarios), 2 (Severity Classification), and 3 (Escalation Path) — the core triage chain.
+- Write findings incrementally. Do not accumulate a single large response.
+
+**Document reading strategy:**
+- Read project documentation selectively. Start with README, deployment docs, and any existing runbooks.
+- Only examine codebase sections relevant to the focused area (monitoring config, error handling, infrastructure-as-code).
+
+**If output would exceed comfortable length:**
+Stop. Deliver what you have. State which sections remain unreviewed and offer to continue.
 
 What's the most likely first real incident — and is the team ready for it?
 

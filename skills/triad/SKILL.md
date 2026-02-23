@@ -61,7 +61,13 @@ After all lenses:
 
 ## Output Management
 
-If the analysis is extensive, deliver the highest-priority findings first. Keep output concise — dense observations, not expansive prose. Note remaining sections available on request.
+**Hard constraints:**
+- Each lens: 1 core question + 2-3 key observations. Dense, not expansive.
+- Without `--all-lenses`, run at most 4 lenses before the synthesis.
+- Write findings incrementally. Do not accumulate a single large response.
+
+**If output would exceed comfortable length:**
+Stop. Deliver lenses completed plus a partial synthesis. State which lenses remain and offer to continue.
 
 What questions would I benefit from asking?
 

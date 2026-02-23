@@ -101,7 +101,17 @@ Present as a go/no-go summary with the full checklist. No changes to files — d
 
 ## Output Management
 
-If the analysis is extensive, deliver no-go items first. Note remaining sections available on request.
+**Hard constraints:**
+- Maximum 10 findings per run. Prioritize no-go items that block launch.
+- If no $ARGUMENTS focus area is given, evaluate only sections 1 (Availability), 4 (Rollback), 6 (Security), and 7 (Incident Response) — the launch-critical quartet.
+- Write findings incrementally. Do not accumulate a single large response.
+
+**Document reading strategy:**
+- Read project documentation selectively. Start with deployment config, monitoring setup, and existing runbooks.
+- Only examine codebase sections relevant to the focused area. Do not read the entire codebase.
+
+**If output would exceed comfortable length:**
+Stop. Deliver the go/no-go verdict with evidence for sections completed. State which sections remain unreviewed and offer to continue.
 
 What would break on day 2 that wouldn't break on day 1?
 

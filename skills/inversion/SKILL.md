@@ -35,7 +35,12 @@ Present as a structured list. Flag any inversions that reveal genuine alternativ
 
 ## Output Management
 
-If the analysis is extensive, deliver the highest-priority findings first. Keep output concise — dense observations, not expansive prose. Note remaining sections available on request.
+**Hard constraints:**
+- Maximum 8 inversions per run. Prioritize the most revealing or surprising ones.
+- Write findings incrementally. Do not accumulate a single large response.
+
+**If output would exceed comfortable length:**
+Stop. Deliver inversions completed so far. State which assumptions remain unflipped and offer to continue.
 
 What questions would I benefit from asking?
 

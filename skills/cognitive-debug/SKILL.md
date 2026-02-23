@@ -54,4 +54,9 @@ Trace the reasoning again with the corrective questions applied. Where does it l
 
 ## Output Management
 
-If the analysis is extensive, deliver the highest-priority findings first. Keep output concise — dense observations, not expansive prose. Note remaining sections available on request.
+**Hard constraints:**
+- Maximum 5 breakpoints per run. Prioritize the earliest divergence point — fixing that often resolves downstream issues.
+- Write findings incrementally. Do not accumulate a single large response.
+
+**If output would exceed comfortable length:**
+Stop. Deliver the reasoning trace and breakpoints found so far. Offer to continue with corrective path.
