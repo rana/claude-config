@@ -25,5 +25,8 @@ plugins/cache/
 plugins/install-counts-cache.json
 plugins/known_marketplaces.json
 
+# Park notes (ephemeral, per-session context)
+park-notes/
+
 # Symlinked/generated skills (not authored here)
 skills/neon-postgres

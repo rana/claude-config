@@ -28,6 +28,14 @@ For each open item, identify the best analysis skill:
 | Operational, deployment, cost, monitoring, scaling | `/ops-review` |
 | Documentation, docs, onboarding, staleness | `/docs-quality` |
 | Workflow, user journey, persona, trace through | `/workflow-trace` |
+| Ripple effect, impact, "what happens if", consequences | `/consequences` |
+| Hidden, implicit, assumption, undocumented, environment | `/ghost` |
+| Size, scope, "how big", impact, touches, minimum viable | `/scope` |
+| Architecture, drift, evolved, inconsistent patterns | `/drift-detect` |
+| Defend, keep, status quo, "what's good about" | `/steelman` |
+| Invert, opposite, flip, "what if not", stress-test | `/inversion` |
+| Future, confuse, remember, dragons, workaround, magic | `/tomorrow` |
+| Why, root cause, reason, origin, archaeology | `/why-chain` |
 | Mission, principle, fidelity, DELTA, calm technology | `/mission-align` (if available) |
 | Cultural, perspective, sensitivity, language, i18n | `/cultural-lens` (if available) |
 | Reading, seeker, UX, experience, accessibility | `/seeker-ux` (if available) |
