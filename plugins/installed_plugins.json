@@ -1,0 +1,115 @@
+{
+  "version": 2,
+  "plugins": {
+    "frontend-design@claude-plugins-official": [
+      {
+        "scope": "project",
+        "projectPath": "/home/rana/prj/srf-yogananda-teachings",
+        "installPath": "/home/rana/.claude/plugins/cache/claude-plugins-official/frontend-design/aa296ec81e8c",
+        "version": "aa296ec81e8c",
+        "installedAt": "2026-02-22T02:51:10.941Z",
+        "lastUpdated": "2026-02-22T02:51:10.941Z",
+        "gitCommitSha": "aa296ec81e8ccb49c9784f167c2c0aa625a86cec"
+      }
+    ],
+    "github@claude-plugins-official": [
+      {
+        "scope": "project",
+        "projectPath": "/home/rana/prj/srf-yogananda-teachings",
+        "installPath": "/home/rana/.claude/plugins/cache/claude-plugins-official/github/aa296ec81e8c",
+        "version": "aa296ec81e8c",
+        "installedAt": "2026-02-22T02:51:49.447Z",
+        "lastUpdated": "2026-02-22T02:51:49.447Z",
+        "gitCommitSha": "aa296ec81e8ccb49c9784f167c2c0aa625a86cec"
+      }
+    ],
+    "ralph-loop@claude-plugins-official": [
+      {
+        "scope": "project",
+        "projectPath": "/home/rana/prj/srf-yogananda-teachings",
+        "installPath": "/home/rana/.claude/plugins/cache/claude-plugins-official/ralph-loop/aa296ec81e8c",
+        "version": "aa296ec81e8c",
+        "installedAt": "2026-02-22T02:52:15.171Z",
+        "lastUpdated": "2026-02-22T02:52:15.171Z",
+        "gitCommitSha": "aa296ec81e8ccb49c9784f167c2c0aa625a86cec"
+      }
+    ],
+    "playwright@claude-plugins-official": [
+      {
+        "scope": "project",
+        "projectPath": "/home/rana/prj/srf-yogananda-teachings",
+        "installPath": "/home/rana/.claude/plugins/cache/claude-plugins-official/playwright/aa296ec81e8c",
+        "version": "aa296ec81e8c",
+        "installedAt": "2026-02-22T02:52:27.911Z",
+        "lastUpdated": "2026-02-22T02:52:27.911Z",
+        "gitCommitSha": "aa296ec81e8ccb49c9784f167c2c0aa625a86cec"
+      }
+    ],
+    "claude-md-management@claude-plugins-official": [
+      {
+        "scope": "project",
+        "projectPath": "/home/rana/prj/srf-yogananda-teachings",
+        "installPath": "/home/rana/.claude/plugins/cache/claude-plugins-official/claude-md-management/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-02-22T02:52:57.752Z",
+        "lastUpdated": "2026-02-22T02:52:57.752Z",
+        "gitCommitSha": "aa296ec81e8ccb49c9784f167c2c0aa625a86cec"
+      }
+    ],
+    "figma@claude-plugins-official": [
+      {
+        "scope": "project",
+        "projectPath": "/home/rana/prj/srf-yogananda-teachings",
+        "installPath": "/home/rana/.claude/plugins/cache/claude-plugins-official/figma/1.1.0",
+        "version": "1.1.0",
+        "installedAt": "2026-02-22T02:53:03.274Z",
+        "lastUpdated": "2026-02-22T02:53:03.274Z",
+        "gitCommitSha": "83b11c0bc199a3c6ee87df0a0bd460139fa72cdc"
+      }
+    ],
+    "sentry@claude-plugins-official": [
+      {
+        "scope": "project",
+        "projectPath": "/home/rana/prj/srf-yogananda-teachings",
+        "installPath": "/home/rana/.claude/plugins/cache/claude-plugins-official/sentry/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-02-22T02:53:43.099Z",
+        "lastUpdated": "2026-02-22T02:53:43.099Z",
+        "gitCommitSha": "e489ce53f1d85cb35c0d059a49ca38616a4105a0"
+      }
+    ],
+    "vercel@claude-plugins-official": [
+      {
+        "scope": "project",
+        "projectPath": "/home/rana/prj/srf-yogananda-teachings",
+        "installPath": "/home/rana/.claude/plugins/cache/claude-plugins-official/vercel/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-02-22T02:53:53.986Z",
+        "lastUpdated": "2026-02-22T02:53:53.986Z",
+        "gitCommitSha": "ae067751b4f42c97d13054211657275029ca8b6d"
+      }
+    ],
+    "hookify@claude-plugins-official": [
+      {
+        "scope": "project",
+        "projectPath": "/home/rana/prj/srf-yogananda-teachings",
+        "installPath": "/home/rana/.claude/plugins/cache/claude-plugins-official/hookify/aa296ec81e8c",
+        "version": "aa296ec81e8c",
+        "installedAt": "2026-02-22T02:55:08.275Z",
+        "lastUpdated": "2026-02-22T02:55:08.275Z",
+        "gitCommitSha": "aa296ec81e8ccb49c9784f167c2c0aa625a86cec"
+      }
+    ],
+    "code-simplifier@claude-plugins-official": [
+      {
+        "scope": "project",
+        "installPath": "/home/rana/.claude/plugins/cache/claude-plugins-official/code-simplifier/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-02-22T02:55:41.471Z",
+        "lastUpdated": "2026-02-22T02:55:41.471Z",
+        "gitCommitSha": "aa296ec81e8ccb49c9784f167c2c0aa625a86cec",
+        "projectPath": "/home/rana/prj/srf-yogananda-teachings"
+      }
+    ]
+  }
+}
