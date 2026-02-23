@@ -9,9 +9,7 @@ Personal toolkit for design analysis, workflow automation, cognitive steering, s
 | `/explore` | Deep multi-dimensional perspective | Open-ended investigation |
 | `/explore-act` | Same, biased toward action | Investigation that should produce a change list |
 | `/calibrate` | Set session thinking parameters | Start of session, mode shift |
-| `/commit-message` | Draft a commit message | Before committing, want to review message first |
-| `/commit-sync` | Stage, commit, push | Have a message ready, want to execute |
-| `/commit-all` | Draft message + stage + commit + push | End-to-end commit workflow |
+| `/commit` | Draft message + stage + commit + push | End-to-end commit workflow |
 | `/park` | Save work state + context notes | Stopping work, switching tasks, end of day |
 | `/resume` | Restore parked work context | Starting work, returning to a task |
 | `/morning` | Daily development briefing | Beginning of session |
