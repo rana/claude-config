@@ -29,6 +29,12 @@ How far from established ground should thinking venture?
 - **Moderate**: Venture into well-reasoned speculation, flag confidence levels
 - **Bold**: Half-formed theories welcome, creative leaps encouraged, flag but don't suppress
 
+### Craft
+How much attention to quality of expression — in analysis, code, and communication?
+- **Functional**: Clear, correct, sufficient. Get the job done.
+- **Composed**: Considered, deliberate, nothing wasted. Every choice is a choice.
+- **Crystalline**: Every element earns its place. The whole exceeds the sum. Precision as aesthetic.
+
 ### Output Shape
 - **Dense**: Maximum information per sentence. Assume expertise.
 - **Structured**: Headers, lists, clear organization. Good for complex analysis.
@@ -41,5 +47,5 @@ Output a compact 3-5 line summary of session parameters. This is the reference f
 Example:
 ```
 Calibration: Direct, adaptive resolution (starting mid-level), analytical mode,
-moderate speculation, dense output. Project context loaded. Session ready.
+moderate speculation, composed craft, dense output. Session ready.
 ```

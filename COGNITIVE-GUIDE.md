@@ -123,6 +123,31 @@ When a conclusion feels wrong or a decision led somewhere unexpected, trace the 
 - During code review when you can't articulate why something seems off
 - As a learning tool — understand your own reasoning patterns
 
+## Dialogue Mode
+
+Three cognitive skills support `--dialogue` for collaborative inquiry instead of one-shot delivery:
+
+```
+/archaeology "our data model" --dialogue
+/triad "performance vs correctness" --dialogue
+/cognitive-debug "the decision to use event sourcing" --dialogue
+```
+
+**What changes:** The skill pauses at natural breakpoints and asks questions before proceeding. Your answers steer the remaining analysis.
+
+| Skill | Pause points | What the user steers |
+|-------|-------------|---------------------|
+| `/archaeology` | Every 2-3 layers | Which layers to explore deeper, what resonates |
+| `/triad` | After first 2 lenses | Whether to reframe the polarity, which lenses to add |
+| `/cognitive-debug` | After trace + breakpoints (Steps 1-3) | Confirm or correct the trace before corrective path |
+
+**When to use dialogue vs. one-shot:**
+
+- **Dialogue** when the subject is personal or ambiguous — when you know something the tool doesn't, and your input mid-stream changes the quality of output. Archaeology of a decision you made. Debugging reasoning you were part of. Tensions where you hold context that isn't in the documents.
+- **One-shot** when the subject is well-documented and the tool can reason autonomously. Code architecture review. Security analysis. Gap detection against a spec.
+
+**Dialogue mode is not compatible with `/compose`** — compose chains need autonomous passes. Use dialogue for standalone deep dives.
+
 ## Multi-Skill Workflows
 
 ### The Explore-then-Analyze Pattern
@@ -239,9 +264,18 @@ Use at session start to set thinking parameters:
 /calibrate
 /calibrate "bold speculation, generative mode, high-level resolution"
 /calibrate "production mode, detail resolution, conservative"
+/calibrate "crystalline craft, exploratory, bold"
 ```
 
-This establishes session defaults for directness, resolution, thinking mode, speculation tolerance, and output shape. It's the cognitive equivalent of setting your IDE preferences before starting work.
+This establishes session defaults for directness, resolution, thinking mode, speculation tolerance, craft level, and output shape. It's the cognitive equivalent of setting your IDE preferences before starting work.
+
+**Parameters:**
+- **Directness** — how directly to lead with strongest thoughts
+- **Resolution** — high-level / mid-level / detail / adaptive
+- **Thinking Mode** — exploratory / analytical / generative / production
+- **Speculation Tolerance** — conservative / moderate / bold
+- **Craft** — functional / composed / crystalline (how much attention to quality of expression)
+- **Output Shape** — dense / structured / conversational
 
 **Pairs well with:**
 - `/morning` — Calibrate, then get the morning briefing
@@ -350,3 +384,5 @@ Tested combinations that produce reliably good results:
 **Tensions are more valuable than resolutions.** The triad skill doesn't resolve polarities — it maps them. Often the most productive outcome is understanding how to hold the tension rather than collapsing it to a decision.
 
 **Debug reasoning like code.** When thinking goes wrong, the failure has a specific location in the reasoning chain. Cognitive-debug finds the breakpoint. This is more useful than "let me think about this again."
+
+**Dialogue turns delivery into collaboration.** One-shot skills deliver analysis. Dialogue-mode skills conduct inquiry. The difference is whether the user's mid-stream knowledge improves the output. When it does, `--dialogue` is the higher octave.

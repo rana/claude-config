@@ -76,10 +76,10 @@ Skills that shape *how* thinking happens rather than *what* is analyzed. See [CO
 
 | Skill | Lens | Trigger phrases |
 |-------|------|----------------|
-| `/archaeology` | 12-layer cognitive excavation — assumptions, tensions, meta-cognition | "Dig deep." "Full archaeology on this." |
-| `/triad` | Dimensional tension analysis through synthesis lenses | "X vs Y" "Explore this tension." |
+| `/archaeology` | 12-layer cognitive excavation — assumptions, tensions, meta-cognition. `--dialogue` for collaborative mode | "Dig deep." "Full archaeology on this." |
+| `/triad` | Dimensional tension analysis through synthesis lenses. `--dialogue` for collaborative mode | "X vs Y" "Explore this tension." |
 | `/reframe` | Geometric spatial search — negative, adjacent, orthogonal, parallel | "Reframe this." "What am I not seeing?" |
-| `/cognitive-debug` | Reasoning trace and correction — breakpoints in thought | "Where did my thinking go wrong?" |
+| `/cognitive-debug` | Reasoning trace and correction — breakpoints in thought. `--dialogue` for collaborative mode | "Where did my thinking go wrong?" |
 
 ### Context & Continuity
 
@@ -165,3 +165,4 @@ Skills that shape *how* thinking happens rather than *what* is analyzed. See [CO
 - **Composable** — use `/compose` to chain skills into multi-pass analysis
 - **Architecture-derived, not checklist-driven** — security and readiness skills reason from the specific stack, not generic lists
 - **Every word shapes the cognitive field** — skill prompts are precision instruments, not instructions to paraphrase
+- **One-shot by default, dialogue on request** — cognitive skills (`archaeology`, `triad`, `cognitive-debug`) support `--dialogue` for collaborative inquiry where the user steers between phases. Default remains autonomous delivery
