@@ -48,3 +48,7 @@ For each open item, identify the best analysis skill:
 **If argument is `batch`:** Generate an Elmer-compatible topic list from all open items, grouped by recommended archetype. Present for review.
 
 **If argument is `summary`:** Show counts: total items, completed, open, by priority, by recommended skill.
+
+## Output Management
+
+If the analysis produces extensive findings, segment output by section. Complete one section fully, then pause and confirm before continuing to the next. Do not attempt to deliver all findings in a single response.
