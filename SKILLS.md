@@ -31,6 +31,7 @@ Each skill looks at a design from a different angle. Use them individually or ch
 | `/docs-quality` | Documentation as communication architecture | "Are the docs good enough?" |
 | `/deep-review` | All dimensions combined — the comprehensive quality gate | "Full review before implementation." |
 | `/workflow-trace` | End-to-end workflow mapping, friction points, handoffs | "Trace the user journey." "Walk through the flow." |
+| `/garden` | Identifier lifecycle — safe deletion, merge candidates, cross-ref repair, category restructuring | "Which ADRs can we delete?" "Prune the decisions." "Merge candidates?" |
 | `/scratch` | Process scratch.md backlog, classify items, route to skills | "What's in the backlog?" "Triage scratch." |
 
 ### Security & Production Readiness
@@ -150,6 +151,11 @@ Skills that shape *how* thinking happens rather than *what* is analyzed. See [CO
 2. `/steelman` each side — What's the strongest case for each pole?
 3. `/reframe` — What spatial searches reveal about the decision space
 4. `/consequences` — Forward-propagate each direction
+
+### Document maintenance
+1. `/garden` — Identify safe deletions, merge candidates, and category improvements
+2. `/coherence` — Verify cross-references are intact after changes
+3. `/docs-quality` — Evaluate whether the result serves readers
 
 ### Stopping work
 1. `/park` — Save context and next steps

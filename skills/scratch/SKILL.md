@@ -39,6 +39,7 @@ For each open item, identify the best analysis skill:
 | Mission, principle, fidelity, DELTA, calm technology | `/mission-align` (if available) |
 | Cultural, perspective, sensitivity, language, i18n | `/cultural-lens` (if available) |
 | Reading, seeker, UX, experience, accessibility | `/seeker-ux` (if available) |
+| Identifier, ADR, DES, renumber, merge, prune, consolidate, delete ADR, gardening | `/garden` |
 | Comprehensive, multi-dimensional, deep review | `/deep-review` |
 | Open-ended, novel, exploratory, "what wants to emerge" | `/explore-act` |
 
