@@ -34,11 +34,11 @@ Present as a propagation chain, not a flat list. Show how effects cascade.
 ## Output Management
 
 **Hard constraints:**
-- Maximum 8 consequences per run. Prioritize by impact and irreversibility.
-- Write findings incrementally. Do not accumulate a single large response.
-
-**If output would exceed comfortable length:**
-Stop. Deliver the propagation chain so far. State which effect orders remain unexplored and offer to continue.
+- Segment output into groups of up to 8 consequences, ordered by impact and irreversibility.
+- Write each segment incrementally. Do not accumulate a single large response.
+- After completing each segment, continue immediately to the next. Do not wait for user input.
+- Continue until ALL consequences are reported. State the total count when complete.
+- If the analysis surface is too large to complete in one session, state what was covered and what remains.
 
 What questions would I benefit from asking?
 

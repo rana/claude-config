@@ -36,11 +36,11 @@ Present as a structured list. Flag any inversions that reveal genuine alternativ
 ## Output Management
 
 **Hard constraints:**
-- Maximum 8 inversions per run. Prioritize the most revealing or surprising ones.
-- Write findings incrementally. Do not accumulate a single large response.
-
-**If output would exceed comfortable length:**
-Stop. Deliver inversions completed so far. State which assumptions remain unflipped and offer to continue.
+- Segment output into groups of up to 8 inversions, ordered by how revealing or surprising they are.
+- Write each segment incrementally. Do not accumulate a single large response.
+- After completing each segment, continue immediately to the next. Do not wait for user input.
+- Continue until ALL inversions are reported. State the total count when complete.
+- If the analysis surface is too large to complete in one session, state what was covered and what remains.
 
 What questions would I benefit from asking?
 

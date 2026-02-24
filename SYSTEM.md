@@ -43,15 +43,18 @@ Read all project markdown documents to ground in the project's actual state.
 ## Output Management
 
 **Hard constraints:**
-- Maximum N findings per run
-- Write findings incrementally
+- Segment output into groups of up to N findings
+- Write each segment incrementally
+- After each segment, continue immediately to the next
+- Continue until ALL findings are reported
 
 [Closing questions]
 ```
 
 **Conventions that matter:**
 - **Read all project markdown documents** — skills ground in the target project's docs, not this system's docs (unless this system is the target)
-- **Hard constraints** — prevent unbounded responses; every skill has a findings cap
+- **Hard constraints** — prevent unbounded responses; segment sizes cap each output chunk, not the total work
+- **Automatic continuation** — after each segment, continue immediately without waiting for user input. The segment size prevents token-limit timeouts; automatic continuation ensures completeness
 - **Write incrementally** — deliver findings as they emerge, don't accumulate
 - **Closing questions** ("What questions would I benefit from asking?") — seed meta-cognition; they're functional, not decorative
 - **"You have complete design autonomy"** — appears in cognitive skills to unlock creative capacity; it's a precision instrument

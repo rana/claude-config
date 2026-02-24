@@ -33,11 +33,11 @@ Present chains as indented trees. Flag any chains that rest on unknown or accide
 ## Output Management
 
 **Hard constraints:**
-- Maximum 6 reasoning chains per run. Prioritize chains resting on unknown or accidental foundations.
-- Write findings incrementally. Do not accumulate a single large response.
-
-**If output would exceed comfortable length:**
-Stop. Deliver chains traced so far. State which targets remain unexplored and offer to continue.
+- Segment output into groups of up to 6 reasoning chains, ordered by chains resting on unknown or accidental foundations.
+- Write each segment incrementally. Do not accumulate a single large response.
+- After completing each segment, continue immediately to the next. Do not wait for user input.
+- Continue until ALL reasoning chains are reported. State the total count when complete.
+- If the analysis surface is too large to complete in one session, state what was covered and what remains.
 
 What questions would I benefit from asking?
 

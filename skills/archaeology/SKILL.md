@@ -108,15 +108,15 @@ Conclude with a synthesis across all layers: what emerged from the full excavati
 ## Output Management
 
 **Hard constraints:**
-- Without `--layers` or `--dialogue`, run at most 6 layers before pausing. Deliver findings so far and offer to continue with remaining layers.
+- Without `--layers` or `--dialogue`, segment layers into groups of up to 6, delivering findings after each group.
 - Each layer: 1-2 sentence summary + key observations. Dense, not expansive.
-- Write findings incrementally. Do not accumulate a single large response.
+- Write each segment incrementally. Do not accumulate a single large response.
+- After completing each segment of layers, continue immediately to the next. Do not wait for user input.
+- Continue until ALL layers are complete and the cross-layer synthesis is delivered.
+- If the analysis surface is too large to complete in one session, state what was covered and what remains.
 
 **Document reading strategy:**
 - Read project documentation selectively based on the excavation target. Not all docs are relevant to all subjects.
-
-**If output would exceed comfortable length:**
-Stop. Deliver the synthesis of layers completed so far. State which layers remain and offer to continue.
 
 What questions would I benefit from asking?
 

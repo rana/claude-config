@@ -61,8 +61,7 @@ For each open item, identify the best analysis skill:
 ## Output Management
 
 **Hard constraints:**
-- For the summary table, show at most 15 items per page. Offer to continue if more exist.
-- Write findings incrementally. Do not accumulate a single large response.
-
-**If output would exceed comfortable length:**
-Stop. Deliver items processed so far. State how many remain and offer to continue.
+- Segment the summary table into pages of up to 15 items each.
+- Write each segment incrementally. Do not accumulate a single large response.
+- After completing each page, continue immediately to the next. Do not wait for user input.
+- Continue until ALL items are processed. State the total count when complete.

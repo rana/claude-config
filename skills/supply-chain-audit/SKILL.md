@@ -85,16 +85,16 @@ Present as a risk-prioritized inventory. No changes to files — document only.
 ## Output Management
 
 **Hard constraints:**
-- Maximum 10 findings per run. Prioritize critical vendor risks and known vulnerabilities.
+- Segment output into groups of up to 10 findings, ordered by critical vendor risks and known vulnerabilities first.
 - If no $ARGUMENTS focus area is given, evaluate only sections 1 (Dependency Inventory), 2 (Vulnerability Posture), and 5 (Vendor Risk) — the highest-impact trio.
-- Write findings incrementally. Do not accumulate a single large response.
+- Write each segment incrementally. Do not accumulate a single large response.
+- After completing each segment, continue immediately to the next. Do not wait for user input.
+- Continue until ALL findings are reported. State the total count when complete.
+- If the analysis surface is too large to complete in one session, state what was covered and what remains.
 
 **Document reading strategy:**
 - Start with package.json/lockfile and vendor integration points. Read documentation selectively.
 - Do not enumerate every transitive dependency in output — summarize counts, flag anomalies.
-
-**If output would exceed comfortable length:**
-Stop. Deliver what you have. State which sections remain unreviewed and offer to continue.
 
 What dependency would hurt most to lose?
 

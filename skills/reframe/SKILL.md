@@ -56,12 +56,12 @@ After all searches:
 ## Output Management
 
 **Hard constraints:**
-- Maximum 8 findings per search. Prioritize by insight value.
+- Segment each search into groups of up to 8 findings, ordered by insight value.
 - If running all four core searches, keep each search to 3-4 key observations before moving to the next.
-- Write findings incrementally. Do not accumulate a single large response.
-
-**If output would exceed comfortable length:**
-Stop. Deliver searches completed so far plus the synthesis of those. State which searches remain and offer to continue.
+- Write each segment incrementally. Do not accumulate a single large response.
+- After completing each search, continue immediately to the next. Do not wait for user input.
+- Continue until ALL searches and the synthesis are delivered. State the total count when complete.
+- If the analysis surface is too large to complete in one session, state what was covered and what remains.
 
 What questions would I benefit from asking?
 

@@ -100,17 +100,17 @@ Present as a prioritized action list. No changes to files — document only.
 ## Output Management
 
 **Hard constraints:**
-- Maximum 8 findings per run. Prioritize by cognitive load reduction impact.
+- Segment output into groups of up to 8 findings, ordered by cognitive load reduction impact.
 - If no $ARGUMENTS mode is given, run Safe Deletion and Merge Candidates only — the two modes with highest signal-to-noise.
-- Write findings incrementally. Do not accumulate a single large response.
+- Write each segment incrementally. Do not accumulate a single large response.
+- After completing each segment, continue immediately to the next. Do not wait for user input.
+- Continue until ALL findings across all requested modes are reported. State the total count when complete.
+- If the analysis surface is too large to complete in one session, state what was covered and what remains.
 
 **Document reading strategy:**
 - Read document indexes and tables of contents first. These reveal structure, counts, and categories without reading every identifier's full text.
 - Only drill into specific identifier text when evaluating merge candidates or safe deletion (need to compare content).
 - For cross-reference repair, grep for identifier patterns across all documents rather than reading linearly.
-
-**If output would exceed comfortable length:**
-Stop. Deliver what you have. State which modes or identifier ranges remain unexamined and offer to continue.
 
 What identifiers are carrying weight they shouldn't?
 

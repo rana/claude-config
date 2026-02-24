@@ -55,8 +55,8 @@ Trace the reasoning again with the corrective questions applied. Where does it l
 ## Output Management
 
 **Hard constraints:**
-- Maximum 5 breakpoints per run. Prioritize the earliest divergence point — fixing that often resolves downstream issues.
-- Write findings incrementally. Do not accumulate a single large response.
-
-**If output would exceed comfortable length:**
-Stop. Deliver the reasoning trace and breakpoints found so far. Offer to continue with corrective path.
+- Segment output into groups of up to 5 breakpoints, prioritizing the earliest divergence point — fixing that often resolves downstream issues.
+- Write each segment incrementally. Do not accumulate a single large response.
+- After completing each segment, continue immediately to the next. Do not wait for user input.
+- Continue until the full reasoning trace, all breakpoints, corrective questions, and corrected path are reported.
+- If the analysis surface is too large to complete in one session, state what was covered and what remains.

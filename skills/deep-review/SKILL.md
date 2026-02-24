@@ -44,16 +44,16 @@ Present as a prioritized action list. No changes to files — document only.
 ## Output Management
 
 **Hard constraints:**
-- Maximum 10 findings per run. Prioritize by severity across all dimensions.
+- Segment output into groups of up to 10 findings, ordered by severity across all dimensions.
 - If no $ARGUMENTS focus area is given, evaluate Coherence and Errors first (the most concrete dimensions), then Gaps if room remains.
-- Write findings incrementally. Do not accumulate a single large response.
+- Write each segment incrementally. Do not accumulate a single large response.
+- After completing each segment, continue immediately to the next. Do not wait for user input.
+- Continue until ALL findings across all dimensions are reported. State the total count when complete.
+- If the analysis surface is too large to complete in one session, state what was covered and what remains.
 
 **Document reading strategy:**
 - Read project documentation index/overview sections first. Only drill into specific sections where cross-references or identifiers need verification.
 - Do not read the entire codebase — sample based on the focus area.
-
-**If output would exceed comfortable length:**
-Stop. Deliver what you have. State which dimensions remain unreviewed and offer to continue.
 
 What questions would I benefit from asking?
 

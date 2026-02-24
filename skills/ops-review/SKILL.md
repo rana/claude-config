@@ -29,15 +29,15 @@ Present as an action list. No changes to files — document only.
 ## Output Management
 
 **Hard constraints:**
-- Maximum 8 findings per run. Prioritize launch-blocking gaps.
+- Segment output into groups of up to 8 findings, ordered by launch-blocking gaps first.
 - If no $ARGUMENTS focus area is given, evaluate only Deployment, Costs, and Monitoring — the operational core.
-- Write findings incrementally. Do not accumulate a single large response.
+- Write each segment incrementally. Do not accumulate a single large response.
+- After completing each segment, continue immediately to the next. Do not wait for user input.
+- Continue until ALL findings are reported. State the total count when complete.
+- If the analysis surface is too large to complete in one session, state what was covered and what remains.
 
 **Document reading strategy:**
 - Read deployment config, infrastructure-as-code, and monitoring setup first. Skip application business logic.
-
-**If output would exceed comfortable length:**
-Stop. Deliver what you have. State which dimensions remain unreviewed and offer to continue.
 
 What questions would I benefit from asking?
 

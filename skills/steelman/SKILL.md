@@ -28,11 +28,11 @@ Present the defense first, weaknesses second. The goal is to overcome the best c
 ## Output Management
 
 **Hard constraints:**
-- Keep the defense concise. Maximum 8 key arguments for the status quo.
-- Write findings incrementally. Do not accumulate a single large response.
-
-**If output would exceed comfortable length:**
-Stop. Deliver the defense and remaining weaknesses so far. Offer to continue with the decision threshold analysis.
+- Keep the defense concise. Segment into groups of up to 8 key arguments for the status quo.
+- Write each segment incrementally. Do not accumulate a single large response.
+- After completing each segment, continue immediately to the next. Do not wait for user input.
+- Continue until the full defense, remaining weaknesses, and decision threshold are all reported.
+- If the analysis surface is too large to complete in one session, state what was covered and what remains.
 
 What questions would I benefit from asking?
 

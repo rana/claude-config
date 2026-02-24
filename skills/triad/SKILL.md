@@ -64,10 +64,10 @@ After all lenses:
 **Hard constraints:**
 - Each lens: 1 core question + 2-3 key observations. Dense, not expansive.
 - Without `--all-lenses`, run at most 4 lenses before the synthesis.
-- Write findings incrementally. Do not accumulate a single large response.
-
-**If output would exceed comfortable length:**
-Stop. Deliver lenses completed plus a partial synthesis. State which lenses remain and offer to continue.
+- Write each segment incrementally. Do not accumulate a single large response.
+- After completing each segment of lenses, continue immediately to the next. Do not wait for user input.
+- Continue until ALL active lenses and the synthesis are delivered.
+- If the analysis surface is too large to complete in one session, state what was covered and what remains.
 
 What questions would I benefit from asking?
 
