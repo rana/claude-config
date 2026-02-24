@@ -24,6 +24,7 @@ plugins/marketplaces/
 plugins/cache/
 plugins/install-counts-cache.json
 plugins/known_marketplaces.json
+plugins/blocklist.json
 
 # Park notes (ephemeral, per-session context)
 park-notes/
