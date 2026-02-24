@@ -1,6 +1,6 @@
 # Claude Code Skills & Commands Reference
 
-Personal toolkit for design analysis, workflow automation, cognitive steering, security posture, production readiness, and thinking amplification.
+Personal toolkit for design analysis, workflow automation, cognitive steering, security posture, production readiness, and thinking amplification. See [SYSTEM.md](SYSTEM.md) for architecture and conventions.
 
 ## Quick Reference
 

@@ -1,6 +1,6 @@
 # Cognitive Skills — Usage Guide
 
-How to use the cognitive steering skills effectively. SKILLS.md is the reference (what exists). This is the playbook (how to think about using them).
+How to use the cognitive steering skills effectively. SKILLS.md is the reference (what exists). This is the playbook (how to think about using them). SYSTEM.md is the architecture they live inside.
 
 ## What These Skills Are
 

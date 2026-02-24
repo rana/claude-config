@@ -1,6 +1,6 @@
 # Skill System — Operational Doctrine
 
-How to wield the full skill system as a coherent practice. COGNITIVE-GUIDE.md is the deep playbook for the 4 cognitive steering skills. This document maps the whole system — taxonomy, selection, lifecycle, composition, and environment.
+How to wield the full skill system as a coherent practice. SYSTEM.md is the architecture and identity. COGNITIVE-GUIDE.md is the deep playbook for the 4 cognitive steering skills. This document maps the whole system — taxonomy, selection, lifecycle, composition, and environment.
 
 ## Taxonomy
 
@@ -234,11 +234,13 @@ Skills that "read all project markdown documents" expect a specific documentatio
 
 | Document | What it is | Audience |
 |----------|-----------|----------|
+| SYSTEM.md | Identity, architecture, conventions, self-maintenance | Someone asking "what is this system?" |
+| SKILLS.md | Reference catalog — what exists, trigger phrases, workflows | Someone choosing which skill to use |
 | SKILL-SYSTEM.md (this) | Operational doctrine for the full 28-skill system | Someone who has the skills and wants to use them effectively |
 | COGNITIVE-GUIDE.md | Deep playbook for the 4 cognitive steering skills | Someone who wants to understand and wield the cognitive skills specifically |
 | Individual SKILL.md files | Self-contained skill definitions | Claude — these are the actual prompts that execute |
 
-COGNITIVE-GUIDE.md goes deeper on 4 skills. This document goes wider across all 28. They reference each other but don't duplicate.
+SYSTEM.md holds the architecture all documents live inside. SKILLS.md is the catalog. This document is the operational playbook across all 28. COGNITIVE-GUIDE.md goes deep on 4. They reference each other but don't duplicate.
 
 ## Team Adoption
 
