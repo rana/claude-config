@@ -15,7 +15,7 @@ Evaluate documentation as communication architecture:
 3. **Staleness** — Any sections that describe what was rather than what is? Obsolete references? Dead links?
 4. **Convention adherence** — Document maintenance rules being followed? Identifier conventions consistent? Section headers follow stated patterns?
 5. **Completeness** — Every significant decision documented? Every component described? Every workflow specified?
-6. **Redundancy** — Information duplicated across documents? Single source of truth maintained?
+6. **Redundancy & reconstructibility** — Information duplicated across documents? Single source of truth maintained? Beyond duplication: sections that restate what's already obvious from the code or domain conventions — documentation that exists because someone wrote it, not because a reader needs it.
 7. **Novel approaches** — Are there documentation practices that would improve communication? Anything worth borrowing from other projects or emerging standards?
 
 Focus area: $ARGUMENTS

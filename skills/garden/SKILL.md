@@ -1,7 +1,7 @@
 ---
 name: garden
 description: Document identifier lifecycle maintenance. Audit ADR-NNN, DES-NNN, and similar identifier systems for safe deletion, merge candidates, category coherence, cross-reference integrity, and cognitive load reduction. Use when identifier systems accumulate weight, after greenfield analysis questions, or when documents feel harder to navigate than they should.
-argument-hint: "[optional: 'prune', 'merge', 'reorder', 'refs', identifier range, or category name] [--plan]"
+argument-hint: "[optional: 'prune', 'merge', 'reorder', 'refs', 'greenfield', identifier range, or category name] [--plan]"
 ---
 
 Read all project markdown documents (CLAUDE.md, CONTEXT.md, DESIGN.md, DECISIONS.md, ROADMAP.md, and any others present) to ground in the project's actual state.
@@ -29,6 +29,7 @@ For each identifier, evaluate deletion safety:
 3. **Absorbed** — Was this content absorbed into a broader identifier? Does the broader one stand alone?
 4. **Orphaned** — Is this identifier referenced by anything outside its own document? No inbound references + no unique content = candidate for deletion.
 5. **Vestigial** — Does this describe a state or decision that no longer applies and has no historical value as context?
+6. **Reconstructible** — Could a developer or AI session reconstruct this identifier's essential content from DESIGN.md, the code, and domain knowledge? Distinguish between reconstructible-fact (the decision is visible in the codebase — low reconstruction cost) and irreplaceable-reasoning (the *why* behind the decision would require a design session to re-derive — high reconstruction cost). Only low-cost reconstructibility qualifies. If keeping the identifier costs more scan-time than reconstructing its content would cost, it's weight.
 
 **Before confirming safe deletion:** Check whether the identifier is referenced in other documents, cross-reference chains, or commit messages. An identifier with zero inbound references and no unique surviving content is safe. An identifier with inbound references requires updating those references first.
 
@@ -57,6 +58,17 @@ Check reference health:
 - **Missing bidirectional links** — A references B but B doesn't reference A
 - **Implicit references** — Content that clearly relates to another identifier but has no explicit cross-reference
 - **Index-body mismatch** — Index entry differs from the actual heading (title drift after edits)
+
+#### Greenfield Audit (`greenfield`)
+
+For each identifier, apply one test: if this identifier disappeared entirely, would a developer or AI session with access to the codebase lose knowledge they cannot reconstruct from DESIGN.md, the code, and domain conventions?
+
+Categorize each identifier as:
+- **Irreplaceable** — contains unique reasoning, constraints, trade-off analysis, or context not derivable from other sources. The *why* behind the decision would require a design session to re-derive.
+- **Reconstructible** — content is derivable from the codebase or other documents at low cost. The identifier adds scan-time overhead without informational value. State *what source* makes it reconstructible (specific code file, DESIGN.md section, domain convention).
+- **Borderline** — the fact is reconstructible but the reasoning holds nuance that might be lost. Worth flagging but not a deletion candidate without judgment.
+
+This mode assumes a technical audience (developers and AI sessions with code access). For identifiers that serve non-technical stakeholders who can't read the codebase, note the audience dependency rather than marking as reconstructible.
 
 ### Phase 3: Sequence Health (always runs)
 

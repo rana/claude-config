@@ -225,6 +225,7 @@ Not every situation needs the full toolkit. Quick single-skill invocations:
 | "What can an attacker do here?" | `/threat-model` |
 | "Are we ready to deploy?" | `/launch-gate` |
 | "What breaks when this hits production?" | `/compose ghost, incident-ready` |
+| "Are these ADRs earning their keep?" | `/garden greenfield` |
 
 ## Integration with Elmer
 
@@ -371,6 +372,9 @@ Tested combinations that produce reliably good results:
 
 # Production readiness — full sweep
 /compose ghost, threat-model, launch-gate : "Phase N deployment"
+
+# Document weight audit — are identifiers earning their keep?
+/compose garden greenfield, crystallize : "the identifier system"
 ```
 
 ## Principles
