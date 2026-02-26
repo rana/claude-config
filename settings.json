@@ -4,11 +4,12 @@
   },
   "permissions": {
     "allow": [
-      "Bash",
-      "Edit",
       "Read",
       "Write",
-      "WebFetch"
+      "Edit",
+      "Bash",
+      "WebFetch",
+      "mcp__Neon"
     ]
   },
   "enabledPlugins": {

@@ -4,7 +4,7 @@ How to wield the full skill system as a coherent practice. SYSTEM.md is the arch
 
 ## Taxonomy
 
-28 skills in 6 families. The families aren't rigid categories — skills cross boundaries. But knowing the family helps you find what you need.
+31 skills in 7 families. The families aren't rigid categories — skills cross boundaries. But knowing the family helps you find what you need.
 
 ### Pre-Implementation (size the work before doing it)
 
@@ -17,19 +17,29 @@ How to wield the full skill system as a coherent practice. SYSTEM.md is the arch
 
 **Family logic:** These skills protect you from premature commitment. Run them *before* you start building. `/scope` sizes the work. `/consequences` maps the ripple effects. `/steelman` prevents premature abandonment. `/inversion` prevents habitual thinking.
 
+### Implementation (bridge design to code and back)
+
+| Skill | One-line | When to reach for it |
+|-------|----------|---------------------|
+| `/implement` | Design-to-code spec: file paths, function signatures, SQL, tests | You're about to start coding from a DES/ADR spec |
+| `/verify` | Post-implementation fidelity check against the governing spec | You've finished coding and want to confirm spec compliance |
+
+**Family logic:** These skills close the design–code loop. `/implement` translates architecture into a concrete build plan. `/verify` checks that the built code matches the spec. Together: implement → code → verify. `/doc-health` (Quality Gates) can run at either end.
+
 ### Quality Gates (review what exists)
 
 | Skill | One-line | When to reach for it |
 |-------|----------|---------------------|
 | `/deep-review` | Multi-dimensional quality gate: coherence, gaps, errors, architecture | At phase boundaries or before implementation begins |
+| `/doc-health` | Single-pass identifier audit + omission search + consistency check | Recurring document maintenance or pre-implementation review |
 | `/coherence` | Cross-document consistency and reference integrity | After significant document changes |
 | `/gaps` | Systematic search for omissions and blind spots | When preparing for implementation or asking "what am I not seeing?" |
 | `/api-review` | API surface consistency and design patterns | When reviewing endpoints, data models, or naming conventions |
 | `/docs-quality` | Documentation practice evaluation for AI + human readers | When evaluating whether docs serve their audiences |
 
-**Family logic:** These skills examine artifacts that already exist. `/deep-review` is the comprehensive gate — it subsumes coherence, gaps, and errors in a single pass. Use the specialized skills (`/coherence`, `/gaps`, `/api-review`) when you need depth in one dimension rather than breadth across all.
+**Family logic:** These skills examine artifacts that already exist. `/deep-review` is the comprehensive gate — it subsumes coherence, gaps, and errors in a single pass. `/doc-health` merges `/garden` + `/gaps` + `/coherence` into a single document pass — reads documents once instead of three times, threading findings across phases. Use the specialized skills (`/coherence`, `/gaps`, `/api-review`) when you need depth in one dimension rather than breadth across all.
 
-**Selection heuristic:** If you only run one quality skill, run `/deep-review`. If deep-review surfaces a cluster of findings in one dimension, follow up with the specialized skill for that dimension.
+**Selection heuristic:** If you only run one quality skill, run `/deep-review`. For document-focused maintenance, `/doc-health` is more token-efficient than running garden + gaps + coherence separately. If deep-review surfaces a cluster of findings in one dimension, follow up with the specialized skill for that dimension.
 
 ### Production & Security (ready to ship?)
 
@@ -92,6 +102,9 @@ When you face a situation and aren't sure which skill to use, work through this:
 | "What happens if we do this?" | `/consequences` |
 | "Should we change this?" | `/steelman` first, then `/inversion` |
 | "What are we missing?" | `/gaps` (concrete) or `/reframe` (perceptual) |
+| "I need to build this spec" | `/implement` |
+| "Does the code match the spec?" | `/verify` |
+| "Are the documents healthy?" | `/doc-health` |
 | "Is this ready?" | `/deep-review` (quality) or `/launch-gate` (production) |
 | "Is this secure?" | `/threat-model` → `/hardening-audit` |
 | "What would break?" | `/ghost` |
@@ -109,8 +122,9 @@ When you face a situation and aren't sure which skill to use, work through this:
 |--------------|---------------|-----|
 | **Exploring/deciding** | archaeology, triad, reframe, consequences | Shape perception before committing |
 | **Designing** | scope, gaps, deep-review, api-review | Size the work, find omissions, gate quality |
-| **Pre-implementation** | steelman, inversion, threat-model | Stress-test decisions before building |
+| **Pre-implementation** | steelman, inversion, threat-model, implement | Stress-test decisions, then spec the build plan |
 | **Implementing** | context-switch, tomorrow, ghost | Navigate, capture knowledge, surface implicit deps |
+| **Post-implementation** | verify, drift-detect, coherence | Check fidelity, detect drift, ensure consistency |
 | **Reviewing** | deep-review, coherence, drift-detect | Quality gate, consistency, architectural fidelity |
 | **Pre-launch** | launch-gate, hardening-audit, ops-review, incident-ready | Production readiness across all dimensions |
 | **Maintaining** | drift-detect, garden, coherence, supply-chain-audit | Fight entropy, manage lifecycle |
@@ -146,14 +160,25 @@ Skills compose. The `/compose` command chains skills in sequence, threading cont
 
 **When:** Comprehensive security review. Threat-model maps the attack surface systematically. Hardening-audit checks specific technical controls. Ghost finds the implicit dependencies both missed.
 
+### The Implementation Pipeline
+
+```bash
+# Spec → build → verify
+/compose implement, verify : "DES-NNN or deliverable"
+```
+
+**When:** Full lifecycle from design to verified code. Implement produces the build plan, you code it, then verify checks compliance. Can also use `/arc-gate` command which selects the right skill chain for the project phase.
+
 ### The Entropy Audit
 
 ```bash
 # Architecture → documents → identifiers
 /compose drift-detect, coherence, garden : "the project"
+# Or: single-pass document health (reads docs once, more token-efficient)
+/doc-health
 ```
 
-**When:** Periodic health check. Drift-detect compares stated vs. actual architecture. Coherence checks document consistency. Garden audits identifier lifecycle. Run quarterly or when things feel inconsistent.
+**When:** Periodic health check. Drift-detect compares stated vs. actual architecture. Coherence checks document consistency. Garden audits identifier lifecycle. `/doc-health` merges garden + gaps + coherence into a single pass — use when documents are the focus. Run quarterly or when things feel inconsistent.
 
 ### The Decision Pipeline
 
@@ -236,17 +261,17 @@ Skills that "read all project markdown documents" expect a specific documentatio
 |----------|-----------|----------|
 | SYSTEM.md | Identity, architecture, conventions, self-maintenance | Someone asking "what is this system?" |
 | SKILLS.md | Reference catalog — what exists, trigger phrases, workflows | Someone choosing which skill to use |
-| SKILL-SYSTEM.md (this) | Operational doctrine for the full 28-skill system | Someone who has the skills and wants to use them effectively |
+| SKILL-SYSTEM.md (this) | Operational doctrine for the full 31-skill system | Someone who has the skills and wants to use them effectively |
 | COGNITIVE-GUIDE.md | Deep playbook for the 4 cognitive steering skills | Someone who wants to understand and wield the cognitive skills specifically |
 | Individual SKILL.md files | Self-contained skill definitions | Claude — these are the actual prompts that execute |
 
-SYSTEM.md holds the architecture all documents live inside. SKILLS.md is the catalog. This document is the operational playbook across all 28. COGNITIVE-GUIDE.md goes deep on 4. They reference each other but don't duplicate.
+SYSTEM.md holds the architecture all documents live inside. SKILLS.md is the catalog. This document is the operational playbook across all 31. COGNITIVE-GUIDE.md goes deep on 4. They reference each other but don't duplicate.
 
 ## Team Adoption
 
 If you're sharing these skills with a team:
 
-**Start with 5, not 28.** Recommended starter set: `/scope`, `/deep-review`, `/gaps`, `/threat-model`, `/crystallize`. These cover the highest-value activities (sizing, quality gating, omission detection, security, simplification) without requiring the cognitive steering philosophy.
+**Start with 5, not 31.** Recommended starter set: `/scope`, `/deep-review`, `/gaps`, `/threat-model`, `/crystallize`. These cover the highest-value activities (sizing, quality gating, omission detection, security, simplification) without requiring the cognitive steering philosophy.
 
 **Add cognitive skills for leads.** `/archaeology` and `/triad` are most valuable for people making architectural decisions. They require understanding the cognitive model — point them to COGNITIVE-GUIDE.md.
 

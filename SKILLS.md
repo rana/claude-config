@@ -14,8 +14,18 @@ Personal toolkit for design analysis, workflow automation, cognitive steering, s
 | `/resume` | Restore parked work context | Starting work, returning to a task |
 | `/morning` | Daily development briefing | Beginning of session |
 | `/compose` | Chain multiple skills in sequence | Need multi-dimensional analysis in one pass |
+| `/arc-gate` | Phase-appropriate quality gate (selects skill chain) | At phase boundaries — pre-implementation, during, pre-launch, arc boundary |
 
 ## Skills by Category
+
+### Implementation Lifecycle
+
+Skills that bridge architecture to code and back. The design–code loop: implement → code → verify.
+
+| Skill | Lens | Trigger phrases |
+|-------|------|----------------|
+| `/implement` | Design-to-code spec: file paths, function signatures, SQL, config, tests | "Spec this for implementation." "Build plan for DES-NNN." |
+| `/verify` | Post-implementation fidelity check against governing spec | "Does the code match the spec?" "Verify DES-NNN." |
 
 ### Analysis Lenses
 
@@ -31,6 +41,7 @@ Each skill looks at a design from a different angle. Use them individually or ch
 | `/docs-quality` | Documentation as communication architecture | "Are the docs good enough?" |
 | `/deep-review` | All dimensions combined — the comprehensive quality gate | "Full review before implementation." |
 | `/workflow-trace` | End-to-end workflow mapping, friction points, handoffs | "Trace the user journey." "Walk through the flow." |
+| `/doc-health` | Single-pass identifier audit + omission search + consistency check (merges garden+gaps+coherence) | "Document health check." "Are the docs healthy?" |
 | `/garden` | Identifier lifecycle — safe deletion, merge candidates, cross-ref repair, category restructuring | "Which ADRs can we delete?" "Prune the decisions." "Merge candidates?" |
 | `/scratch` | Process scratch.md backlog, classify items, route to skills | "What's in the backlog?" "Triage scratch." |
 
@@ -95,8 +106,10 @@ Skills that shape *how* thinking happens rather than *what* is analyzed. See [CO
 1. `/scope` — How big is this? What does it touch?
 2. `/gaps` — What's missing from the requirements?
 3. `/consequences` — What are the ripple effects?
-4. Implement
-5. `/deep-review` — Quality gate before merge
+4. `/implement` — Design-to-code spec: files, functions, SQL, tests
+5. Build the code
+6. `/verify` — Does the code match the spec?
+7. `/deep-review` — Quality gate before merge
 
 ### Deep exploration of a design decision
 1. `/archaeology "should we use X approach"` — Full cognitive excavation
@@ -153,9 +166,15 @@ Skills that shape *how* thinking happens rather than *what* is analyzed. See [CO
 4. `/consequences` — Forward-propagate each direction
 
 ### Document maintenance
-1. `/garden` — Identify safe deletions, merge candidates, and category improvements
-2. `/coherence` — Verify cross-references are intact after changes
-3. `/docs-quality` — Evaluate whether the result serves readers
+1. `/doc-health` — Single-pass: identifier audit + omission search + consistency check (or run garden + coherence + gaps separately for targeted depth)
+2. `/docs-quality` — Evaluate whether the result serves readers
+3. `/crystallize` — Simplify and sharpen (structural + communication quality)
+
+### Phase-appropriate quality gate
+1. `/arc-gate pre-implementation` — doc-health → mission-align → ghost → crystallize
+2. `/arc-gate during-implementation` — drift-detect → ghost → coherence → crystallize
+3. `/arc-gate pre-launch` — launch-gate → ops-review → hardening-audit → threat-model
+4. `/arc-gate boundary [N]` — deep-review → mission-align → workflow-trace → crystallize
 
 ### Stopping work
 1. `/park` — Save context and next steps

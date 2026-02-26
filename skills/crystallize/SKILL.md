@@ -8,7 +8,9 @@ Read all project markdown documents to ground in the project's actual state.
 
 ## Crystallization Review
 
-Apply the editorial knife:
+Apply the editorial knife across two dimensions: structural simplification and communication quality.
+
+### Structural Simplification
 
 1. **Would you simplify anything?** — What's more complex than it needs to be? What's solving a problem that doesn't exist yet?
 2. **Would you remove anything?** — What's dead weight? Vestigial decisions? Features that don't earn their keep? Could this be reconstructed from the code and domain knowledge alone — and if so, is it documentation weight masquerading as documentation value?
@@ -16,6 +18,13 @@ Apply the editorial knife:
 4. **What are you not enthusiastic about?** — Where does the design feel forced, over-engineered, or uncertain? Be honest.
 5. **What are you enthusiastic about?** — What's working well? What's elegant? Reinforce the strengths.
 6. **Is the design crystalline?** — Does every element serve a purpose? Can you see through it clearly?
+
+### Communication Quality
+
+7. **AI readability** — Can a fresh Claude session navigate these documents efficiently? Are identifiers unambiguous? Is structure consistent enough for pattern-matching?
+8. **Onboarding** — Could a new developer (or a new Claude session) understand the project from docs alone? Where would they get lost?
+9. **Staleness** — Are there references to things that no longer exist? Outdated state descriptions? Dead links?
+10. **Redundancy vs. value** — Is the same information in multiple places? Is that useful (different audiences need different formats) or dead weight (documentation that exists only because someone wrote it)?
 
 Focus area: $ARGUMENTS
 
