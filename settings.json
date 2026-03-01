@@ -9,7 +9,14 @@
       "Edit",
       "Bash",
       "WebFetch",
-      "mcp__Neon"
+      "mcp__Neon",
+      "Read(//home/rana/prj/srf-yogananda-teachings/**)",
+      "mcp__plugin_playwright_playwright__browser_navigate",
+      "mcp__plugin_playwright_playwright__browser_wait_for",
+      "mcp__plugin_playwright_playwright__browser_close",
+      "mcp__plugin_playwright_playwright__browser_network_requests",
+      "mcp__plugin_playwright_playwright__browser_type",
+      "mcp__plugin_playwright_playwright__browser_resize"
     ]
   },
   "enabledPlugins": {

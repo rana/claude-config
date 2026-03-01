@@ -31,4 +31,5 @@ Daily development briefing. Summarize the current state of your work across bran
    {based on state: resume parked work, address PR feedback, or start fresh}
    ```
 
-10. Keep the briefing concise. This is a 30-second orientation, not a deep dive.
+10. Run `python3 scripts/conversation-analytics.py --project ~/.claude/projects/-home-rana-prj-srf-yogananda-teachings --output /tmp/morning-analytics.md 2>/dev/null` and read the Weekly Activity and Skill Usage sections from `/tmp/morning-analytics.md`. Add a brief "Session stats" section to the briefing showing sessions this week, top skills used, and any notable patterns (e.g., skill imbalance, unusually large sessions).
+11. Keep the briefing concise. This is a 30-second orientation, not a deep dive.
