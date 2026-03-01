@@ -10,11 +10,19 @@ Read CONTEXT.md, DESIGN.md, DECISIONS.md, and ROADMAP.md first to ground in the 
 
 Perform a single-pass review covering three dimensions simultaneously. Do NOT run them sequentially — interleave findings by severity.
 
-### Dimension 1: Mission Alignment (from /mission-align)
+### Dimension 1: Intent Alignment
 
-Check against PRI-01 through PRI-11. Focus on the top 3 most at-risk principles unless $ARGUMENTS specifies otherwise.
+Check whether the design and implementation align with the project's stated purpose, principles, and constraints. Draw these from CONTEXT.md, DECISIONS.md, project README, or any document that states goals or governing principles.
 
-For each principle risk: what principle, where the issue is, the specific fix.
+Look for:
+- Deviations from stated goals or success criteria
+- Violations of recorded design decisions (ADRs)
+- Scope creep beyond defined boundaries
+- Patterns that serve implementer preference over stated project needs
+
+Focus on the top 3 most at-risk alignments unless $ARGUMENTS specifies otherwise.
+
+For each misalignment: what goal or principle is at risk, where the issue is, the specific fix.
 
 ### Dimension 2: Cross-Document Coherence (from /coherence)
 

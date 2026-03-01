@@ -12,7 +12,7 @@ The project has a design but no code (or code is about to begin). Focus: are the
 
 Run these skills in sequence, threading findings:
 1. **`/doc-health`** — Identifier audit + omission search + consistency check
-2. **`/mission-align`** — SRF principle alignment (top 3 most at-risk principles)
+2. **`/gaps`** — Intent alignment: check the design against the project's stated purpose, principles, and constraints. Focus on the top 3 gaps between intent and design.
 3. **`/ghost`** — Hidden dependencies and assumptions that would block implementation
 4. **`/crystallize`** — Simplify before building
 
@@ -42,7 +42,7 @@ An arc or milestone boundary. Focus: is everything consistent and complete befor
 
 Run these skills in sequence, threading findings:
 1. **`/deep-review`** — Comprehensive multi-dimensional quality gate
-2. **`/mission-align`** — Full principle alignment check (all 11 principles)
+2. **`/gaps`** — Intent alignment: full check against all stated goals, principles, and success criteria. Focus on gaps between what was intended and what was built.
 3. **`/workflow-trace`** — Trace the editorial pipeline end-to-end for friction
 4. **`/crystallize`** — Simplify before the next phase adds complexity
 

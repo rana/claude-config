@@ -36,9 +36,7 @@ For each open item, identify the best analysis skill:
 | Invert, opposite, flip, "what if not", stress-test | `/inversion` |
 | Future, confuse, remember, dragons, workaround, magic | `/tomorrow` |
 | Why, root cause, reason, origin, archaeology | `/why-chain` |
-| Mission, principle, fidelity, DELTA, calm technology | `/mission-align` (if available) |
-| Cultural, perspective, sensitivity, language, i18n | `/cultural-lens` (if available) |
-| Reading, seeker, UX, experience, accessibility | `/seeker-ux` (if available) |
+| Mission, principle, fidelity, alignment, intent | `/review` (intent alignment dimension) |
 | Identifier, ADR, DES, renumber, merge, prune, consolidate, delete ADR, gardening | `/garden` |
 | Comprehensive, multi-dimensional, deep review | `/deep-review` |
 | Open-ended, novel, exploratory, "what wants to emerge" | `/explore-act` |
@@ -50,11 +48,11 @@ For each open item, identify the best analysis skill:
 - One-line summary
 - Priority (P1/P2/P3 or inferred)
 - Recommended skill
-- Whether it's better suited for interactive (skill) or autonomous (Elmer)
+- Whether it's better suited for interactive exploration or autonomous background analysis
 
 **If argument is an item number:** Show the full item text, recommended skill, and rationale. Ask if the user wants to proceed.
 
-**If argument is `batch`:** Generate an Elmer-compatible topic list from all open items, grouped by recommended archetype. Present for review.
+**If argument is `batch`:** Generate a topic list from all open items, grouped by recommended skill. Present for review.
 
 **If argument is `summary`:** Show counts: total items, completed, open, by priority, by recommended skill.
 
